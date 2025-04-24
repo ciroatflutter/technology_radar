@@ -1,5 +1,19 @@
 # Changelog
 
+## Version v4.7.0 (2025-04-24)
+
+### Features
+
+- add restricted functionality (ec8ae237)
+
+### Fixes
+
+- allow to run test workflow manually (201305ec)
+
+### Chores and tidying
+
+- prepare v4.7.0 (3d14baef)
+
 ## Version v4.6.1 (2025-03-26)
 
 ### Fixes
