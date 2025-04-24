@@ -19,12 +19,21 @@ interface ItemProps {
 
 export function ItemDetail({ item }: ItemProps) {
   const notMaintainedText = getLabel("notUpdated");
+  const restrictedText = getLabel("restricted");
   return (
     <>
       <div className={styles.header}>
         <h1 className={styles.title}>{item.title}</h1>
         {item.tags?.map((tag) => <Tag key={tag} tag={tag} />)}
       </div>
+      {item.restricted && (
+        <div className={cn(styles.revision, styles.hint)}>
+          <span className={styles.release}>
+            <Attention className={styles.restrictedIcon} />
+          </span>
+          <div className={styles.content}>{restrictedText}</div>
+        </div>
+      )}
       <div className={styles.revisions}>
         {notMaintainedText && isNotMaintained(item.release) && (
           <div className={cn(styles.revision, styles.hint)}>

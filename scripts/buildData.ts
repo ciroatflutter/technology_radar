@@ -92,6 +92,7 @@ async function parseDirectory(dirPath: string): Promise<Item[]> {
             quadrant: data.quadrant,
             body,
             featured: data.featured !== false,
+            restricted: data.restricted === true,
             flag: Flag.Default,
             tags: data.tags || [],
             revisions: [],
@@ -108,6 +109,10 @@ async function parseDirectory(dirPath: string): Promise<Item[]> {
             typeof data.featured === "boolean"
               ? data.featured
               : items[id].featured;
+          items[id].restricted =
+            typeof data.restricted === "boolean"
+              ? data.restricted
+              : items[id].restricted;
         }
 
         items[id].revisions!.push({

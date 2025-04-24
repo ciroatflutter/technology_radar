@@ -18,6 +18,7 @@ export interface Item {
   info?: string;
   body: string;
   featured: boolean;
+  restricted: boolean;
   ring: string;
   quadrant: string;
   flag: Flag;

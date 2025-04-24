@@ -103,3 +103,18 @@ export function FlagBadge({ flag: flagName, short, ...props }: FlagBadgeProps) {
     </Badge>
   );
 }
+
+interface RestrictedBadgeProps extends Omit<BadgeProps, "color" | "children"> {
+  label?: string;
+}
+
+export function RestrictedBadge({
+  label = "restricted",
+  ...props
+}: RestrictedBadgeProps) {
+  return (
+    <Badge color="var(--restricted)" {...props}>
+      {label}
+    </Badge>
+  );
+}

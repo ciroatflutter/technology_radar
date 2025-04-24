@@ -2,7 +2,11 @@ import Link from "next/link";
 
 import styles from "./ItemList.module.css";
 
-import { FlagBadge, RingBadge } from "@/components/Badge/Badge";
+import {
+  FlagBadge,
+  RestrictedBadge,
+  RingBadge,
+} from "@/components/Badge/Badge";
 import { getQuadrant } from "@/lib/data";
 import { Item } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -44,6 +48,10 @@ export function ItemList({
               flag={item.flag}
               short={size == "small"}
             />
+
+            {item.restricted && (
+              <RestrictedBadge className={styles.flag} size="small" />
+            )}
 
             {size === "large" && (
               <div className={styles.info}>
