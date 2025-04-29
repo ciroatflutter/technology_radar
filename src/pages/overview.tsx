@@ -14,6 +14,7 @@ const Overview: CustomPage = () => {
   const title = getLabel("pageOverview");
   const router = useRouter();
   const ring = router.query.ring as string | undefined;
+  const restricted = router.query.restricted as string | undefined;
   const query = (router.query.query as string) || "";
 
   const onRingChange = useCallback(
@@ -21,6 +22,13 @@ const Overview: CustomPage = () => {
       router.push({ query: { ...router.query, ring, query } });
     },
     [router, query],
+  );
+
+  const onRestrictedChange = useCallback(
+    (restricted: string) => {
+      router.push({ query: { ...router.query, ring, query, restricted } });
+    },
+    [router, query, ring],
   );
 
   const onQueryChange = useCallback(
@@ -31,7 +39,8 @@ const Overview: CustomPage = () => {
   );
 
   const { items, index } = useMemo(() => {
-    const items = getItems().filter((item) => !ring || item.ring === ring);
+    let items = getItems().filter((item) => !ring || item.ring === ring);
+    items = items.filter((item) => !restricted || item.restricted);
     const index = new Fuse(items, {
       ...getFuzzySearchConfig(),
       keys: [
@@ -55,7 +64,7 @@ const Overview: CustomPage = () => {
     });
 
     return { items, index };
-  }, [ring]);
+  }, [ring, restricted]);
 
   const results = useMemo(() => {
     if (!query) return items;
@@ -72,8 +81,10 @@ const Overview: CustomPage = () => {
       <Filter
         query={query}
         ring={ring}
+        restricted={restricted}
         onRingChange={onRingChange}
         onQueryChange={onQueryChange}
+        onRestrictedChange={onRestrictedChange}
       />
 
       <ItemList items={results} size="large" hideRing={!!ring} />
