@@ -1,5 +1,11 @@
 # Changelog
 
+## Version v4.9.0 (2025-04-29)
+
+### Features
+
+- add support for markdown in the notUpdated and restricted labels (2661c869)
+
 ## Version v4.8.0 (2025-04-29)
 
 ### Features
