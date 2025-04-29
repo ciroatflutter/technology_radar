@@ -1,3 +1,5 @@
+import { marked } from "marked";
+
 import styles from "./ItemDetail.module.css";
 
 import { RingBadge } from "@/components/Badge/Badge";
@@ -18,20 +20,23 @@ interface ItemProps {
 }
 
 export function ItemDetail({ item }: ItemProps) {
-  const notMaintainedText = getLabel("notUpdated");
-  const restrictedText = getLabel("restricted");
+  const notMaintainedText = marked.parse(getLabel("notUpdated"));
+  const restrictedText = marked.parse(getLabel("restricted"));
   return (
     <>
       <div className={styles.header}>
         <h1 className={styles.title}>{item.title}</h1>
         {item.tags?.map((tag) => <Tag key={tag} tag={tag} />)}
       </div>
-      {item.restricted && (
+      {item.restricted && restrictedText && (
         <div className={cn(styles.revision, styles.hint)}>
           <span className={styles.release}>
             <Attention className={styles.restrictedIcon} />
           </span>
-          <div className={styles.content}>{restrictedText}</div>
+          <div
+            className={styles.content}
+            dangerouslySetInnerHTML={{ __html: restrictedText }}
+          />
         </div>
       )}
       <div className={styles.revisions}>
@@ -40,7 +45,10 @@ export function ItemDetail({ item }: ItemProps) {
             <span className={styles.release}>
               <Attention className={styles.notMaintainedIcon} />
             </span>
-            <div className={styles.content}>{notMaintainedText}</div>
+            <div
+              className={styles.content}
+              dangerouslySetInnerHTML={{ __html: notMaintainedText }}
+            />
           </div>
         )}
         <Revision
