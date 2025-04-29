@@ -9,7 +9,7 @@ interface FilterProps {
   onQueryChange: (query: string) => void;
   ring?: string;
   onRingChange: (ring: string) => void;
-  restricted?: string;
+  restricted?: boolean;
   onRestrictedChange: (restricted: string) => void;
 }
 

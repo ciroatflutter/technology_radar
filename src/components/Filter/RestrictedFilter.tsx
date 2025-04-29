@@ -4,13 +4,13 @@ import { Badge, RestrictedBadge } from "@/components/Badge/Badge";
 import { cn } from "@/lib/utils";
 
 interface RestrictedFilterProps {
-  value?: string;
+  value?: boolean;
   onChange: (value: string) => void;
   className?: string;
 }
 
 export function RestrictedFilter({
-  value,
+  value = false,
   onChange,
   className,
 }: RestrictedFilterProps) {

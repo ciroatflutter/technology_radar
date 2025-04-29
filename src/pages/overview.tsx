@@ -81,7 +81,7 @@ const Overview: CustomPage = () => {
       <Filter
         query={query}
         ring={ring}
-        restricted={restricted}
+        restricted={!!restricted}
         onRingChange={onRingChange}
         onQueryChange={onQueryChange}
         onRestrictedChange={onRestrictedChange}
