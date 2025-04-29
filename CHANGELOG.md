@@ -1,5 +1,15 @@
 # Changelog
 
+## Version v4.8.0 (2025-04-29)
+
+### Features
+
+- add restricted filter in overview page (acfd3012)
+
+### Fixes
+
+- restricted filter types (747e4056)
+
 ## Version v4.7.0 (2025-04-24)
 
 ### Features
