@@ -1,5 +1,11 @@
 # Changelog
 
+## Version v4.10.0 (2025-05-02)
+
+### Features
+
+- show border on restricted items in the radar (6454fd88)
+
 ## Version v4.9.0 (2025-04-29)
 
 ### Features
