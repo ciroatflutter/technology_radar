@@ -92,11 +92,19 @@ const _Chart: FC<ChartProps> = ({
       <Link
         key={item.id}
         href={`/${item.quadrant}/${item.id}`}
-        data-tooltip={item.title}
+        data-tooltip={
+          item.restricted ? item.title + " (restricted)" : item.title
+        }
         data-tooltip-color={quadrant.color}
         tabIndex={-1}
       >
-        <Blip flag={item.flag} color={quadrant.color} x={x} y={y} />
+        <Blip
+          flag={item.flag}
+          restricted={item.restricted}
+          color={quadrant.color}
+          x={x}
+          y={y}
+        />
       </Link>
     );
   };
