@@ -8,8 +8,8 @@ import IconSearch from "@/components/Icons/Search";
 import IconSocialGithub from "@/components/Icons/SocialGithub";
 import { getLabel, getSocialLinks, getToggle } from "@/lib/data";
 
-function getGitHubLink(links) {
-  let githubLink = links.find((link) => link.icon === "github");
+function getGitHubLink(links: any): string {
+  let githubLink = links.find((link: any) => link.icon === "github");
   return githubLink ? githubLink.href : "";
 }
 
