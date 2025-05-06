@@ -1,5 +1,15 @@
 # Changelog
 
+## Version v4.11.0 (2025-05-06)
+
+### Features
+
+- adds github social link to header (c1fdb175)
+
+### Fixes
+
+- types in github social link for header (972be473)
+
 ## Version v4.10.0 (2025-05-02)
 
 ### Features
