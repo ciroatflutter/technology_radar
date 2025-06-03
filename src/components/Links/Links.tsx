@@ -1,7 +1,7 @@
 import styles from "./Links.module.css";
 
 import { getAppName, getLinks } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { assetUrl, cn } from "@/lib/utils";
 
 interface LinksProps {
   className?: string;
@@ -28,7 +28,7 @@ export function Links({ className, position, size = "small" }: LinksProps) {
                 rel="noopener noreferrer"
               >
                 <img
-                  src={link.iconUrl}
+                  src={assetUrl(link.iconUrl)}
                   className={cn(styles.logo, styles[`size-${size}`])}
                   alt={getAppName()}
                   title={link.title}
