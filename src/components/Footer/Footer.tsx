@@ -1,5 +1,6 @@
 import styles from "./Footer.module.css";
 
+import { Links } from "@/components/Links/Links";
 import { SocialLinks } from "@/components/SocialLinks/SocialLinks";
 import { getAppName, getImprintUrl, getLabel, getLogoUrl } from "@/lib/data";
 
@@ -12,6 +13,7 @@ export function Footer() {
         <p className={styles.description}>{getLabel("footer")}</p>
         <SocialLinks className={styles.socialLinks} />
       </div>
+      <Links className={styles.links} position="footer" size="large" />
       <a href={getImprintUrl()} className={styles.imprint} target="_blank">
         {getLabel("imprint")}
       </a>

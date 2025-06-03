@@ -66,6 +66,10 @@ export function getSocialLinks() {
   return config.social;
 }
 
+export function getLinks() {
+  return config.links;
+}
+
 export function getTags(): string[] {
   return data.tags;
 }

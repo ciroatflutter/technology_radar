@@ -1,0 +1,26 @@
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.link {
+  display: block;
+}
+
+.size-small {
+  width: 22px;
+}
+
+.size-large {
+  width: 125px;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+}

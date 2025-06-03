@@ -6,6 +6,7 @@ import IconOverview from "@/components/Icons/Overview";
 import IconQuestion from "@/components/Icons/Question";
 import IconSearch from "@/components/Icons/Search";
 import IconSocialGithub from "@/components/Icons/SocialGithub";
+import { Links } from "@/components/Links/Links";
 import { getLabel, getSocialLinks, getToggle } from "@/lib/data";
 
 function getGitHubLink(links: any): string {
@@ -47,6 +48,7 @@ export function Navigation() {
             </Link>
           </li>
         )}
+        <Links className={styles.links} position="header" />
       </ul>
     </nav>
   );

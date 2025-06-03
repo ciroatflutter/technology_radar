@@ -87,6 +87,7 @@ Open the `config.json` file and configure the radar to your needs.
 | flags       | Config of the flags of the radar. See config below                                                                             |
 | chart       | If you hava a lot of items, you can increase the `size` to scale down the radar                                                |
 | social      | Social links in the footer. See config below                                                                                   |
+| links       | Custom links with images to show on header, footer or both.                                                                    |
 | imprint     | URL to the legal information                                                                                                   |
 | labels      | Configure the labels to change the texts and labels of the radar                                                               |
 | tags        | (optional) Use to render only items, which contain at least one of the specified tags. e.g `["frontend", "backend"]`           |
@@ -145,6 +146,15 @@ An object that represents the fuse.js options, which is used to search the radar
 | --------- | -------------------------------------------------------------------------------------- |
 | href      | URL to the website                                                                     |
 | icon      | One of `facebook`, `github`, `gitlab`, `instagram`, `linkedin`, `x`, `xing`, `youtube` |
+
+#### `config.links.[]`
+
+| Attribute | Description                       |
+| --------- | --------------------------------- |
+| href      | URL to the website                |
+| position  | One of `header`, `footer`, `both` |
+| iconUrl   | URL to the image for the link     |
+| title     | Short label to show as tooltip    |
 
 ### Step 4: Add a help page with explanations
 

@@ -104,6 +104,14 @@
     "size": 800,
     "blipSize": 12
   },
+  "links": [
+    {
+      "href": "https://github.com/aoepeople",
+      "position": "both",
+      "iconUrl": "/aoe.png",
+      "title": "Technology Radar"
+    }
+  ],
   "social": [
     {
       "href": "https://twitter.com/aoepeople",
