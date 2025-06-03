@@ -1,5 +1,11 @@
 # Changelog
 
+## Version v4.12.1 (2025-06-03)
+
+### Fixes
+
+- use assetUrl for links image (a0ea98ea)
+
 ## Version v4.12.0 (2025-06-03)
 
 ### Features
