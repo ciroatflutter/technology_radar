@@ -1,5 +1,11 @@
 # Changelog
 
+## Version v4.12.0 (2025-06-03)
+
+### Features
+
+- new links configuration (7e093658)
+
 ## Version v4.11.0 (2025-05-06)
 
 ### Features
