@@ -8,12 +8,11 @@
     "dev": "next dev",
     "build:icons": "npx @svgr/cli --typescript --no-dimensions --no-prettier --out-dir src/components/Icons -- src/icons",
     "build:data": "tsx scripts/buildData.ts",
-    "build": "next build",
+    "build": "next build && npm run build:icons",
     "start": "next start",
     "lint": "next lint",
     "fix": "prettier . --write",
-    "prepare": "husky",
-    "postinstall": "npm run build:icons"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
