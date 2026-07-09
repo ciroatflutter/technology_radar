@@ -1,5 +1,15 @@
 # Changelog
 
+## Version v4.12.2 (2026-07-09)
+
+### Security Fixes
+
+- remove the postinstall script (d14df33c)
+
+### Fixes
+
+- build command update (#9) (5c79faf1)
+
 ## Version v4.12.1 (2025-06-03)
 
 ### Fixes
