@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build:icons": "npx @svgr/cli --typescript --no-dimensions --no-prettier --out-dir src/components/Icons -- src/icons",
     "build:data": "tsx scripts/buildData.ts",
-    "build": "next build && npm run build:icons",
+    "build": "npm run build:icons && next build",
     "start": "next start",
     "lint": "next lint",
     "fix": "prettier . --write",
